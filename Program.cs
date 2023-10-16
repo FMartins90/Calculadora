@@ -3,33 +3,13 @@ double numero1, numero2, resultado = 0;
 string operacao;
 string sair;
 
-Console.ForegroundColor = ConsoleColor.Green;
+ExibeMenu ();
 
-Console.WriteLine("+---------------------------+");
-Console.WriteLine("|       Seja-bem vindo      |");
-Console.WriteLine("+---------------------------+");
-Console.WriteLine("|   Comandos das operações: |");
-Console.WriteLine("+---------------------------+");
-Console.WriteLine("|          Soma (+)         |");
-Console.WriteLine("|        Subtração (-)      |");
-Console.WriteLine("|      Multiplicação (*)    |");
-Console.WriteLine("|         Divisão (/)       |");
-Console.WriteLine("|      Exponeciação (^)     |");
-Console.WriteLine("|      Radiação (R ou r)    |");
-Console.WriteLine("+---------------------------+");
-
-Console.ForegroundColor = ConsoleColor.Red;
-Console.WriteLine("+--------------------------------------------------------------------------------+");
-Console.WriteLine("|   Observação: a cada etapa, leia as orientações e tecle ENTER para continuar.  |");
-Console.WriteLine("|na radiação (raiz quadrada), o número que irá contar é o primeiro valor digitado|");
-Console.WriteLine("+--------------------------------------------------------------------------------+");
-Console.ResetColor();
 Console.WriteLine();
 Console.WriteLine("Aguarde...");
 Console.WriteLine();
 
-Console.WriteLine("Digite o primeiro número: ");
-numero1 = Convert.ToDouble(Console.ReadLine());
+numero1 = SolicitaNumero("primeiro");
 
 Console.WriteLine("Escolha uma operação: ");
 Console.ForegroundColor = ConsoleColor.Green;
@@ -93,4 +73,46 @@ while (sair != "S" && sair != "SIM");
 {
     Console.WriteLine();
     Console.WriteLine("\nVolte sempre!");
+}
+void ExibeMenu ()
+{
+    Console.ForegroundColor = ConsoleColor.Green;
+
+Console.WriteLine("+---------------------------+");
+Console.WriteLine("|       Seja-bem vindo      |");
+Console.WriteLine("+---------------------------+");
+Console.WriteLine("|   Comandos das operações: |");
+Console.WriteLine("+---------------------------+");
+Console.WriteLine("|          Soma (+)         |");
+Console.WriteLine("|        Subtração (-)      |");
+Console.WriteLine("|      Multiplicação (*)    |");
+Console.WriteLine("|         Divisão (/)       |");
+Console.WriteLine("|      Exponeciação (^)     |");
+Console.WriteLine("|      Radiação (R ou r)    |");
+Console.WriteLine("+---------------------------+");
+
+Console.ForegroundColor = ConsoleColor.Red;
+Console.WriteLine("+--------------------------------------------------------------------------------+");
+Console.WriteLine("|   Observação: a cada etapa, leia as orientações e tecle ENTER para continuar.  |");
+Console.WriteLine("|na radiação (raiz quadrada), o número que irá contar é o primeiro valor digitado|");
+Console.WriteLine("+--------------------------------------------------------------------------------+");
+Console.ResetColor();
+}
+
+void ExibeMenu()
+
+double SolicitaNumero(string ordemNumero)
+{
+double numero = 0;
+
+Console.Write("Digite o ");
+
+Console ForegroundColor = ConsoleColor.Green;
+Console.Write(ordemNumero);
+
+Console.WriteLine("número");
+
+numero = Convert.ToDouble(Console.ReadLine());
+
+return numero;
 }
